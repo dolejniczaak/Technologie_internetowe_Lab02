@@ -1,0 +1,128 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Skaning</title>
+  <link rel="stylesheet" href="css/format.css" />
+</head>
+<body>
+	<script src="jquery-1.11.1.js"></script>
+    <script src="skrypt.js"></script>
+<div class="zewnetrzny" id="gora">
+<div class="naglowek">
+  <h1 class="logo">Skaning laserowy- technologia przyszłości</h1> 
+</div>
+<div class="dodatek1"></div>
+<div class="main">
+  <div class="sidebar_spacer">
+  <div class="section sidebar">
+<ul class="menu">
+      	<li><a href="index.html">Główna</a></li>  
+        <li><a href="Ogólne.html">Ogólne</a></li>
+        <li><a href="Istota.html">Istota działania</a></li>
+        <li><a href="Pomiar.html">Pomiar odległości</a></li>
+        <li><a href="Typy.html">Typy skanerów</a></li>
+        <li><a href="Zastosowania.html">Zastosowania</a></li>
+      <li><a href="Galeria.html">Galeria</a></li>
+</ul>  
+  </div>
+  <div class="linki">
+  	<h2>Przydatne linki</h2>
+  </div>
+  <div class="lista">
+  	<ul>
+  	<li><a href="http://pl.wikipedia.org/wiki/Skaning_laserowy" target=_blank>Wiki</a></li>
+  	<li><a href="http://geoforum.pl/?menu=46816,46858,46960&link=teledetekcja-krotki-wyklad-teledetekcja-lotniczy-skaning-laserowy" target=_blank>Geoforum</a></li>
+</ul>  
+  </div>
+  </div>
+   <div class="content_spacer">
+    <div class="section_content">
+      <div class="blok">
+      </div>
+      <div id="slideshow">
+	    <img src="images/logo_bkg.jpg" alt="" class="active" />
+	    <img src="images/odleglosci_tlo.png" alt="" />
+	    <img src="images/typy.jpg" alt="" />
+	    <img src="images/zastosowania_tlo.jpg" alt="" />
+	    <img src="images/skaner.jpg" alt="" />
+	    <img src="images/barwna.jpg" alt="" />
+	</div>
+      <div class="dodatek2"></div>
+      <div class="content">
+      <div class="tekst">
+        <h3>Daj się ponieść fali</h3>
+	<p>Najpopularniejsza metoda pomiaru odległości jest oparta na pomiarze czasu przebiegu 
+		fali elektromagnetycznej od emitera do odbiornika (ang. time-of-flight). 
+		W skanerach laserowych polegają się na pomiarze czasu, w jakim impuls lasera pokonuje
+		 drogę do obiektu lub na podstawie przesunięcia fazowego. W związku z tym wyróżniamy lasery
+		  (skanery) impulsowe oraz wykorzystujące ciągły, modulowany sygnał.  </p>
+		<h4>Skanery impulsowe</h4>
+		<p>Odległość od urządzenia do obiektu równa się połowie czasu, 
+			jaki upłynął od wysłania impulsu do jego powrotu pomnożonemu 
+			przez prędkość światła w danym ośrodku v = c/n (najczęściej jest to 
+			powietrze, dla którego przyjmuje się współczynnik złamania równy w przybliżeniu 
+			n = 1,00025). W skrócie: </p>
+	<h5>R=ct/2n</h5>
+	<p >Maksymalna odległość, jaką można zmierzyć (Rmax) zależy tylko od 
+		odstępu między kolejnymi sygnałami wysyłanymi przez skaner. 
+		W praktyce czas ten jest na tyle duży (w porównaniu do rzędu wielkości 
+		prędkości światła!), że można przyjąć, że głównym wyznacznikiem maksymalnej 
+		możliwej do pomierzenia odległości są raczej straty energii impulsu. Natomiast 
+		rozdzielczość ΔR skanera jest ograniczona szerokością impulsu tp i jest do niej wprost proporcjonalna.</p>
+		<div class="odleglosci1"></div>
+		<p>By powracające sygnały (echa) były możliwe do odróżnienia spełniona musi być zależność:
+	t2>t1+tp Co można zapisać, jako:
+	2 *(n/c)*(R2-R1)>(n/c)*Rp
+	ostatecznie otrzymując:
+	R2-R1>Rp/2=0,75 [m]
+	Jest to granica możliwości rozróżnienia dwóch powracających impulsów. Ponieważ Rp = 1,5 [m], to oznacza to, że następujące po sobie obiekty musi dzielić co najmniej 0,75 metra, by mogły zostać odróżnione. Jest to tzw. „Problem 1,5 metra”.
+	Metody określania czasu:</p>
+		<ol>
+				<li><h5>Detekcja maksimum (peak detection)</h5> – rejestracja czasu rozpoczyna się, 
+				gdy sygnał wychodzący osiągnie maksimum i kończy wraz z maksimum 
+				sygnału przychodzącego. Metoda może dawać niejednoznaczne wyniki w 
+				przypadku wystąpienia kilku pików.</li>
+		<li><h5>Progowanie impulsu</h5> – start rejestracji czasu,
+			 gdy sygnał wychodzący przekroczy ustaloną wartość 
+			 amplitudy i kończy, gdy amplituda echa przekroczy z góry
+			  zadaną wartość progową (procent amplitudy sygnału wychodzącego).</li>
+		<li><h5>Detekcja stałej części echa </h5>– rozpoczęcie podobnie jak przy 
+			progowaniu impulsu. Koniec w chwili, gdy amplituda echa przekroczy 
+			jakiś procent swojej wartości.</li>
+	</ol>
+	<p>Dokładność określenia odległości wyrażona jest zależnością:
+	σ=(c/2)*tr*/√SNR
+	gdzie: SNR (lub S/N) to stosunek sygnału do szumu pomiarowego (signal-to-noise ratio). Przyjmując typową wartość SNR = 100, otrzymujemy σ = 15 [mm]. Dla większość skanerów wartości σ zawierają się w przedziale 5-10 [mm].
+	Podsumowując: skanery impulsowe mają znaczny zasięg i rozdzielczość uwarunkowaną szerokością impulsu.</p>
+	<h4>Skanery fazowe</h4>
+		<p>W skanerach fazowych czas przebiegu sygnału określa się według formuły:
+	t=(ϕ/2π)*T+nT
+	gdzie: T – okres (związany z długością fali zależnością: λ = cT), n – liczba całkowitych długości fali zawartych w odległości przebytej przez sygnał od emitera do odbiornika,
+	 Na podstawie tak wyznaczonego czasu można w zwykły sposób (podobnie jak dla skanera impulsowego) 
+	 wyznaczyć odległość. Zasięg takiego skanera jest ograniczony. 
+	 Powyżej tej wartości wyznaczenie odległości nie będzie jednoznaczne,
+	  ponieważ przekroczona zostanie maksymalna różnica faz. Celem uniknięcia tego problemu stosuje 
+	  się systemy wykorzystujące co najmniej dwie częstotliwości: długą falę nośną modulowaną sygnałem
+	   o większej częstotliwości. Wtedy maksymalny zasięg określony jest (tą samą zależnością) przez długość fali nośnej.
+	Rozdzielczość skanera jest proporcjonalna do długość fali i różnicy faz:
+	ΔR=(λshort/4π)*Δϕ
+	Natomiast dokładność wyznaczenia odległości wyraża się wzorem:
+	σ=(λshort/4π)*(1/√SNR)
+	Na podstawie dwóch powyższych wzorów widać łatwo, że – w przeciwieństwie do skanera impulsowego – 
+	rozdzielczość i dokładność zależą dodatkowo od długości fali, a więc można je modyfikować 
+	nakładając na falę nośną fale od różnych długościach.
+		</p>
+		</div>
+      </div>
+      <div class="stopka"> 
+      <p> inż. Dominika Olejniczak. All rights reserved.</p>
+      </div>
+    </div>   
+  </div>
+</div>
+</div>
+</body>
+</html>
